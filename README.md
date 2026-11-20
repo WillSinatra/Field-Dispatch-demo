@@ -45,6 +45,8 @@ Cada empleado tiene una lista de secciones habilitadas, validada contra una list
 
 ## Cómo correr los tests
 
+> Solo para quien tenga autorización escrita del autor (ver [Licencia](#licencia)). Para el resto, el resultado se puede ver en las ejecuciones de GitHub Actions del repositorio.
+
 ```bash
 # Claim atómico (Docker + PHP 8.1+ con pdo_pgsql)
 docker compose up -d
@@ -68,6 +70,4 @@ cd examples/section-permissions/frontend && npm install && npm test && npm run t
 
 ## Licencia
 
-[PolyForm Noncommercial 1.0.0](LICENSE). Ver también [NOTICE](NOTICE).
-
-El código se puede **leer, estudiar y ejecutar** para aprender, evaluar o con fines no comerciales. **No se puede usar con fines comerciales** (venderlo, incluirlo en un producto o servicio de pago, ni usarlo dentro de una empresa con fines de lucro) sin permiso escrito del autor. Para consultas de uso comercial, escribime por [LinkedIn](https://www.linkedin.com/in/santiagosanchez-programming).
+**Todos los derechos reservados.** El código se publica solo para ser leído como muestra de trabajo. No se permite copiarlo, modificarlo, ejecutarlo, distribuirlo ni reutilizarlo, comercial o no, sin autorización escrita del autor. Ver [LICENSE](LICENSE) y [NOTICE](NOTICE). Para consultas: [LinkedIn](https://www.linkedin.com/in/santiagosanchez-programming).

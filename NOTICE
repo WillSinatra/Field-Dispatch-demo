@@ -15,11 +15,9 @@ funcionalidad existente en ningún sistema en producción.
 
 Licencia
 --------
-Copyright (c) 2026 Santiago Sánchez.
-Este repositorio se publica bajo la PolyForm Noncommercial License 1.0.0
-(ver LICENSE y https://polyformproject.org/licenses/noncommercial/1.0.0).
+Copyright (c) 2026 Santiago Sánchez. Todos los derechos reservados.
 
-- Se permite leer, estudiar, ejecutar y modificar el código para fines no comerciales.
-- No se permite su uso comercial sin autorización escrita del autor.
-- Quien distribuya una copia debe incluir LICENSE y este aviso.
-- Esta licencia no es de código abierto según la definición de la OSI.
+Este repositorio se publica solo para ser leído como muestra de trabajo.
+No se concede ninguna licencia: no se permite copiar, modificar, ejecutar,
+distribuir ni reutilizar el contenido, comercial o no, sin autorización
+escrita del autor (ver LICENSE).
