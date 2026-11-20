@@ -1,0 +1,12 @@
+node_modules/
+dist/
+vendor/
+.env
+.env.*
+!.env.example
+*.log
+*.dump
+*.bak
+.DS_Store
+.vscode/
+.idea/

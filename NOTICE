@@ -1,0 +1,14 @@
+Field Dispatch · Demo
+
+Este repositorio es una demostración técnica creada a partir de la experiencia
+del autor en el desarrollo de una plataforma interna de gestión de servicio
+técnico. No contiene código fuente, datos, credenciales, configuración ni
+documentación interna de ningún empleador o cliente.
+
+- "Acme ISP" es un nombre ficticio. Cualquier parecido con una empresa real es casual.
+- Todos los datos de ejemplo (cuadrillas, órdenes, empleados) son inventados.
+- El código de los ejemplos fue escrito para esta demo con fines ilustrativos.
+- Las marcas mencionadas (React, PostgreSQL, PHP, Apache, etc.) pertenecen a sus dueños.
+
+Las piezas marcadas como "propuesta" en la documentación no describen
+funcionalidad existente en ningún sistema en producción.

@@ -1,0 +1,58 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  atomic-claim:
+    name: Claim atómico (PHP + PostgreSQL)
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: field_demo
+          POSTGRES_USER: demo
+          POSTGRES_PASSWORD: demo   # credencial de juguete, solo para CI
+        ports:
+          - 5433:5432
+        options: >-
+          --health-cmd "pg_isready -U demo -d field_demo"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+          extensions: pdo_pgsql
+      - name: Cargar esquema y datos ficticios
+        run: |
+          export PGPASSWORD=demo
+          psql -h 127.0.0.1 -p 5433 -U demo -d field_demo -v ON_ERROR_STOP=1 \
+            -f examples/atomic-claim/schema.sql \
+            -f examples/atomic-claim/seed.sql
+      - name: Tests de concurrencia (atómico debe pasar, ingenuo debe fallar)
+        run: sh examples/atomic-claim/run-tests.sh
+
+  section-permissions:
+    name: Permisos por sección (PHP + TypeScript)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+      - name: Guard de servidor (PHP)
+        run: php examples/section-permissions/backend/tests/section_guard_test.php
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Reglas del panel (vitest) y typecheck
+        working-directory: examples/section-permissions/frontend
+        run: |
+          npm install --no-audit --no-fund
+          npm test
+          npm run typecheck
