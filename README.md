@@ -68,4 +68,6 @@ cd examples/section-permissions/frontend && npm install && npm test && npm run t
 
 ## Licencia
 
-[MIT](LICENSE). Ver también [NOTICE](NOTICE).
+[PolyForm Noncommercial 1.0.0](LICENSE). Ver también [NOTICE](NOTICE).
+
+El código se puede **leer, estudiar y ejecutar** para aprender, evaluar o con fines no comerciales. **No se puede usar con fines comerciales** (venderlo, incluirlo en un producto o servicio de pago, ni usarlo dentro de una empresa con fines de lucro) sin permiso escrito del autor. Para consultas de uso comercial, escribime por [LinkedIn](https://www.linkedin.com/in/santiagosanchez-programming).
